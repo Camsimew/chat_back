@@ -7,8 +7,8 @@ app.use(express.json());
 app.use(cors());
 
 // Route configuration
-app.get('/', (res, res) => {
-    res.setEncoding('Todo OK!');
+app.get('/', (req, res) => {
+    res.send('Todo OK!');
 });
 
 // Error handler
