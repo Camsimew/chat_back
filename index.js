@@ -37,7 +37,7 @@ io.on('connection', async (socket) => {
     console.log('Se ha conectado un nuevo cliente');
 
     // Recuperar los 5 ultimos mensajes de la BD
-    await ChatMessage.find().sort({ createdAt: -1 }).limit(5);
+    const arr = await ChatMessage.find().sort({ createdAt: -1 }).limit(5);
 
 
     socket.emit('chat_init', {
